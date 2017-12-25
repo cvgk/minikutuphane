@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Kiralanacak Kitap</title>
+<style>
+   table {
+     position: relative;
+     width:400px;
+     height:400px;
+   }
+</style>
+</h:head>
+<h:body>
+    <h:form>
+      <p:growl id="messages" showDetail="true"></p:growl>
+       <table align="center">
+           <tr>
+              <th><p:outputLabel for="kitapadi" value="Kitap Adi: "></p:outputLabel></th>
+              <th><p:inputText id="kitapadi" value="#{kayitEkleBean.kitapAdi}"></p:inputText></th>
+           </tr>
+           <tr>
+             <th><p:outputLabel for="memberadi" value="Uye Adi Soyadi: "></p:outputLabel></th>
+             <th><p:inputText id="memberadi" value="#{kayitEkleBean.uyeAdiSoyadi}"></p:inputText></th>
+           </tr>
+           <tr>
+              <th><p:outputLabel for="duhulu" value="Kitap Alis Tarihi"></p:outputLabel></th>
+              <th><p:calendar id="duhulu" value="#{kayitEkleBean.kayitTarihi}"></p:calendar></th>
+           </tr>
+           <tr>
+             <th><p:outputLabel for="naspi" value="Kitap Donus Tarihi"></p:outputLabel></th>
+             <th><p:calendar id="naspi" value="#{kayitEkleBean.sonKayitTarihi}"></p:calendar></th>
+           </tr>
+           <tr>
+             <th></th>
+             <th><p:commandButton value="Onayla" actionListener="#{kayitEkleBean.kaydet}" update="messages">
+             </p:commandButton></th>
+           </tr>
+       </table>  
+    </h:form>
+</h:body>
+</html>

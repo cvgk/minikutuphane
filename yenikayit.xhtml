@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Yeni Kayit Ekleme</title>
+</head>
+<h:body>
+    <h:form>
+        <table>
+             <tr>
+                <th>Adiniz ve Soyadiniz</th>
+                <th><p:inputText id="ad" value="#{myManagedBean.name}"></p:inputText></th>
+             </tr>
+             <tr>
+                <th>Telefon Numaraniz</th>
+                <th><p:inputText id="tf" value="#{myManagedBean.telephone}"></p:inputText></th>
+             </tr>
+             <tr>
+                <th>Dogum Tarihiniz</th>
+                <th><p:calendar id="dt" value="#{myManagedBean.dateOfBirth}"></p:calendar></th>
+             </tr>
+             <tr>
+                <th>Kayit Tarihi</th>
+                <th><p:calendar id="kt" value="#{myManagedBean.kayitTarihi}"></p:calendar></th>
+             </tr>
+             <tr>
+                <th></th>
+                <th>
+                  <p:commandButton value="onayla" actionListener="#{myManagedBean.save}"></p:commandButton>
+                </th>
+             </tr>
+        </table>
+    </h:form>
+</h:body>
+</html>
